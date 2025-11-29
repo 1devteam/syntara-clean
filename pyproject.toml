@@ -1,0 +1,52 @@
+[build-system]
+requires = ["hatchling>=1.21"]
+build-backend = "hatchling.build"
+
+[project]
+name = "syntara"
+version = "0.0.1"
+description = "Syntara core package (strict src layout)"
+authors = [{ name = "inmoa" }]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+
+[project.scripts]
+syntara = "syntara.cli:main"
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=7",
+  "ruff>=0.5",
+  "black>=24.0",
+  "pre-commit>=3.7",
+  "mypy>=1.11",
+  "fastapi>=0.115",
+  "uvicorn[standard]>=0.30",
+  "httpx>=0.27"
+]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.black]
+line-length = 100
+target-version = ["py312"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/syntara"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+  "src",
+  "pyproject.toml",
+  "README.md",
+  "LICENSE",
+  "NOTICE",
+]
+
