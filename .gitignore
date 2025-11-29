@@ -1,103 +1,51 @@
-# --- Python ---
+# --- Python build / env -------------------------------------------------------
+.venv/
+venv/
+env/
+ENV/
+dist/
+build/
+*.egg-info/
+.eggs/
+
+# Bytecode / cache
 __pycache__/
 *.py[cod]
 *.pyo
 *.pyd
-*.so
-*.egg
-*.egg-info/
-.eggs/
-build/
-dist/
-pip-wheel-metadata/
-
-# virtual envs
-.venv/
-.venv*/
-env/
-venv/
-ENV/
-
-# pytest / coverage
+.mypy_cache/
+.ruff_cache/
 .pytest_cache/
+
+# Tools
 .coverage
 htmlcov/
 .tox/
-.nox/
+.cache/
 
-# linters / formatters
-.ruff_cache/
-.mypy_cache/
-.pyre/
-.pytype/
-
-# packaging / metadata
-*.manifest
-*.spec
-
-# --- Node (optional) ---
-node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-lock.yaml
-
-# --- Editors / IDE ---
+# IDE / editor
 .vscode/
 .idea/
-*.swp
-*.swo
+*.iml
 
-# --- OS / misc ---
+# OS cruft
 .DS_Store
 Thumbs.db
 
-# --- Env / secrets (never commit real secrets) ---
-.env
-.env.*
-*.secret
-*.key
-# added post-setup
-gcm-linux_amd64*.tar.gz
-git-credential-manager/
-tree.txt
-gcm-linux_amd64*.tar.gz
-git-credential-manager/
-libHarfBuzzSharp.so
-libSkiaSharp.so
-git-credential-manager/
-gcm-linux_amd64*.tar.gz
+# Logs / temp
+*.log
+*.tmp
+*.swp
+*.swo
+
+# Node / frontend (if ever added)
+node_modules/
+npm-debug.log*
+yarn.lock
+pnpm-lock.yaml
+
+# Local scripts / binaries (do not commit large executables)
+*.exe
+*.dll
 *.so
-tree.txt
-# large/binary artifacts (ignored)
-git-credential-manager/
-gcm-linux_amd64*.tar.gz
-*.so
-tree.txt
-# large/binary artifacts (ignored)
-git-credential-manager/
-gcm-linux_amd64*.tar.gz
-*.so
-tree.txt
-git-credential-manager/
-git-credential-manager/
-git-credential-manager/
-*.tar.gz
-git-credential-manager/
-*.tar.gz
-*.so
-git-credential-manager/
-*.tar.gz
-*.so
-git-credential-manager/
-*.tar.gz
-*.so
-git-credential-manager/
-*.tar.gz
-*.so
-git-credential-manager/
-*.tar.gz
-*.so
-git-credential-manager/
-*.tar.gz
-*.so
+*.dylib
